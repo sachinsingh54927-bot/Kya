@@ -1,0 +1,225 @@
+<html>
+<head>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+:root{
+--primary-color:#e81f23;
+--background-color: #0c0a0b;
+--text-light: #767268;
+--extra-light: #f3f4f6;
+--white: #ffffff;
+--max-width: 1200px;
+--header-font: "orbitron",sans-serif;
+}
+html,
+body{
+position:relative;
+font-family: "Roboto",sans-serif;
+background-color: var(--background-color);
+}
+
+p {
+  background-image: url('images/background.jpg');
+}
+body {
+  background-image: url('images/background.jpg');
+}
+body {
+  background-image: url('images/background.jpg');
+}
+body {
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+  background-size: cover;
+}
+body {
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+/*Navbar content functionality*/
+#navcontent {
+    display: flex;
+    justify-content: right;
+}
+
+/*Navbar content styling*/
+ul li {
+    list-style: none;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+ul li a {
+    padding:7px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+ul li a:hover {
+    background-color: #FFCD00;
+    border-radius: 10px;
+}
+
+.section_container{
+max-width: var(--max-width);
+margin:auto;
+padding: 5rem 1 rem;
+}
+.section_subheader{
+max-width: 800px;
+margin-inline: auto;
+margin-bottom: 1rem;
+font-size: 1rem;
+font-width: 600px;
+color: white;
+letter-spacing: 5px;
+text-align:center;
+}
+.section_header{
+color: white;
+max-width: 800px;
+margin-inline: auto;
+font-size: 3rem;
+ text-color: var(--white);
+font-family:var(--header-font);
+letter-spacing: 2px;
+
+text-align: center;
+font-size: 4rem;
+
+}
+.section_desription{
+color:white;
+line-height:1.75rem;
+}
+.btn{
+padding:.75rem 1.5rem; 
+outline: none;
+border: none;
+color: white;
+background-color:transparent;
+border: 2px solid var(--primary-color);
+transiton: 0.3s;
+cursor:pointer;
+}
+header{
+min-height : 100vh;
+position:relative;
+isolation: isolate;
+}
+header:: before{
+position: absolute;
+content:"";
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+}
+.header_container{
+height: 100vh;
+display:flex;
+flex-direction: column;
+justify-content: center;
+text-color:white;
+}
+
+.gallery_container{
+max-width: 1500px;
+}
+.swiper{
+margin-top: 4rem;
+width: 100%;
+}
+.swiper-slide{
+max-width:45rem;
+}
+
+.hearder_container{
+justify-content:flex-start;
+align-items: flex-start;
+}
+.hearder_container .section_header{
+margin: 0;
+text-align: center;
+font-size: 5rem;
+}
+const scrollRevealOption={
+distance: "50px",
+origin:"bottom",
+duration: 1000,
+};
+scrollReveal().reveal(".header_container.section_header",{
+...secrollRevealOption,
+}};
+const swiper=new Swiper(".swiper",{
+loop:true,
+effect:"coverflow",
+grabCursor: true,
+centeredSlides:  true,
+slidesPerView:"auto",
+coverflowEffect:{
+rotate: 0,
+depth:0,
+modifier:1,
+scale:0.9,
+stretch:0,
+},
+});
+</style>
+
+<title> Cars </title>
+</head>
+<body>
+<p style="background-image: url('images/background.jpg');">
+<ul id="navcontent">
+<li> <a href="#home"> HOME </a> </li>
+<li> <a href="#gallery">GALLERY </a> </li>
+<li> <a href="#about"> ABOUT </a> </li>
+<li> <a href="#contact"> CONTACT US</a> </li>
+</ul>
+<header id="home">
+<div class="section_container header_container">
+<h1 class="section_header"> FIND YOUR <br>PERFECT RIDE<br> TODAY </h1>
+</div >
+</header>
+<script scr="https://unpkg.com/scrollreveal"> </script>
+<section class="section_container gallery_container" id="gallery">
+<p class="section_subheader">EIGHTYEIGHT DETAILING </p>
+<h2 class="section_header"> OUR GALLERY</h2>
+</section>
+
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+
+   <div class="swiper-slide">
+ <img src="images/gallery.jpeg" alt="gallery">
+</div>
+<div class="swiper-slide">
+ <img src="images/gallery2.jpg" alt="gallery">
+</div>
+<div class="swiper-slide">
+ <img src="images/gallery3.jpeg" alt="gallery">
+</div>
+<div class="swiper-slide">
+ <img src="images/gallery4.jpg" alt="gallery">
+</div>
+<div class="swiper-slide">
+ <img src="images/gallery5.jpg" alt="gallery">
+</div>
+    ...
+  </div>
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
